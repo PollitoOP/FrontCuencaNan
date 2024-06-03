@@ -18,7 +18,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
 
-        var myLatlng = new google.maps.LatLng(40.748817, -73.985428);
+        var myLatlng = new google.maps.LatLng(-2.9001285, -79.00589649999999);
         var mapOptions = {
             zoom: 13,
             center: myLatlng,
