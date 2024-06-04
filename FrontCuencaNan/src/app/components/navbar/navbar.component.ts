@@ -190,6 +190,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
       return  `with: ${reason}`;
     }
   }
+
+  navigateToDashboard() {
+    this.router.navigate(['/login']);
+  }
   ngOnDestroy(){
      window.removeEventListener("resize", this.updateColor);
   }
