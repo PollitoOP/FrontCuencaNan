@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   signInClick() {
     const container = document.getElementById('container');
     container.classList.remove("right-panel-active");
+    
   }
 
   ngOnInit(): void {
