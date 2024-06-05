@@ -13,6 +13,7 @@ import { ComponentsModule } from "./components/components.module";
 import { LoginComponent } from './login/login.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { FormComponent } from './usuario/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { FormComponent } from './usuario/form.component';
     NgbModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
   declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, LoginComponent, UsuarioComponent, FormComponent],
