@@ -1,54 +1,56 @@
 <body>
-<div class="container" id="container">
-  <div class="form-container sign-up-container">
-    <form action="#">
-      <h1>Crear una cuenta</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>o use su correo electrónico para registrarse</span>
-      <input type="text" placeholder="cedula" />
-      <input type="text" placeholder="Nombre" />
-      <input type="text" placeholder="Apellido" />
-      <input type="email" placeholder="Email" />
-      <input type="text" placeholder="Direccion" />
-      <input type="text" placeholder="genero" />
-      <input type="date" placeholder="Fecha de nacimiento" />
-      <input type="text" placeholder="Nombre de usuario" />
-      <input type="password" placeholder="Password" />
-      <button routerLink="/login">Registarme</button>
-    </form>
-  </div>
-  <div class="form-container sign-in-container">
-    <form action="#">
-      <h1>Iniciar sesión</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>o usa tu cuenta</span>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <a href="#">¿Olvidaste tu contraseña?</a>
-      <button routerLink="/login">Iniciar sesión</button>
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-left">
-        <h1>¡Bienvenido de vuelta!</h1>
-        <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
-        <button class="ghost" id="signIn" (click)="signInClick()">Iniciar sesión</button>
-      </div>
-      <div class="overlay-panel overlay-right">
-        <h1>¡Hola, amigo!</h1>
-        <p>Ingresa tus datos personales y comienza tu viaje con nosotros</p>
-        <button class="ghost" id="signUp" (click)="signUpClick()">Registrarse</button>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Crear una cuenta</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>o use su correo electrónico para registrarse</span>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button (click)="signInClick()">Registarme</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <h1>Iniciar sesión</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>o usa tu cuenta</span>
+        <input type="email" formControlName="email" placeholder="Email" />
+        <div *ngIf="email?.touched && email?.invalid" class="error-message">
+          <div *ngIf="email?.errors?.required">Correo electronico es requerido.</div>
+          <div *ngIf="email?.errors?.email">Formato de correo inválido.</div>
+        </div>
+        <input type="password" formControlName="password" placeholder="Password" />
+        <div *ngIf="password?.touched && password?.invalid" class="error-message">
+          <div *ngIf="password?.errors?.required">Se requiere contraseña.</div>
+        </div>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+        <button type="submit">Iniciar sesión</button>
+        <div *ngIf="loginError" class="error-message">{{ loginError }}</div>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>¡Bienvenido de vuelta!</h1>
+          <p>Para mantenerse conectado con nosotros, inicie sesión con su información personal</p>
+          <button class="ghost" id="signIn" (click)="signInClick()">Iniciar sesión</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>¡Hola, amigo!</h1>
+          <p>Ingresa tus datos personales y comienza tu viaje con nosotros</p>
+          <button class="ghost" id="signUp" (click)="signUpClick()">Registrarse</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>  
 </body>

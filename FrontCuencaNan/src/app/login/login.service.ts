@@ -14,7 +14,7 @@ export class LoginService {
 
     //Datos quemados de usuario admin
     private adminCredentials = {
-        email: 'admin',
+        email: 'admin@gmail.com',
         password: 'admin123'
     };
 
