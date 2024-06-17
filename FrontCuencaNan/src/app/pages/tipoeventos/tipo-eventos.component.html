@@ -1,0 +1,46 @@
+<div class=" content">
+    <div class=" row">
+        <div class=" col-md-12">
+
+            <div class="card">
+                <div class="card-header">
+                    Categorias
+                </div>
+                <div class="card-body">
+
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Listado de tipos de eventos</h6>
+                    <div class="my-2 text-left">
+                        <button class="btn btn-rounded btn-primary" type="button">Crear
+                            Categoria</button>
+                    </div>
+                    <table class="table table-boardered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Codigo tipos de evento</th>
+                                <th>Nombre</th>
+                                <th>Descripcion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let tipoEventos of tipoEventoss">
+                                <td>{{tipoEvento.id_tipoEvento}}</td>
+                                <td>{{tipoEvento.nombre_tipoEvento}}</td>
+                                <td>{{tipoEvento.descripcion}}</td>
+
+                                <!-- <td>
+                              <button type="button" name="button" [routerLink]="['/categoria/form',categoria.codigoCategoria]"
+                                class="btn btn-primary">Editar</button>
+                            </td>
+                            <td>
+                              <button type="button" name="button" (click)="eliminarCategoria(categoria.codigoCategoria)"
+                                class="btn btn-danger">Eliminar</button>
+                            </td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>

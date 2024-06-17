@@ -58,8 +58,8 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/rtl",
-    title: "RTL Support",
+    path: "/TipoEventos",
+    title: "Tipos de eventos",
     rtlTitle: "ار تي ال",
     icon: "icon-world",
     class: ""

@@ -1,6 +1,6 @@
 export abstract class Usuario {
 
-    id_usuario: number;
+    id_usuario: number = 0;
     cedula: string = "";
     nombres: string = "";
     apellidos: string = "";

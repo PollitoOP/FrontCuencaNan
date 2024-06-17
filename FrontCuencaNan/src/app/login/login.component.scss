@@ -22,6 +22,7 @@ h1 {
 
 h2 {
 	text-align: center;
+	color: #222;
 }
 
 p {
@@ -78,6 +79,8 @@ form {
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
+	overflow-y: auto; /* Para agregar scroll vertical */
+ 	max-height: 600px;
 }
 
 input {
