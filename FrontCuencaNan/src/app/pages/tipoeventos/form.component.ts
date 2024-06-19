@@ -18,6 +18,7 @@ export class TipoEventoFormComponent implements OnInit {
     private activateRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.cargarTipoEvento();
 
   }
 

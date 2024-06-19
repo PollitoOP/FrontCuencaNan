@@ -18,8 +18,6 @@ export class TipoEventosComponent implements OnInit {
       tipoEventos => this.tipoEventoss=tipoEventos
     );
 
-    console.log("sfdds")
-
     console.log(this.tipoEventosServices.getTipoEventos().subscribe(
       tipoEventos => this.tipoEventoss=tipoEventos
     ))
