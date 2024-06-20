@@ -10,9 +10,9 @@ declare interface RouteInfo {
 export const ROUTES: RouteInfo[] = [
   {
     path: "/dashboard",
-    title: "Dashboard",
+    title: "INICIO",
     rtlTitle: "لوحة القيادة",
-    icon: "icon-chart-pie-36",
+    icon: "icon-bank",
     class: ""
   },
   {
@@ -24,9 +24,9 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: "/maps",
-    title: "Maps",
+    title: "MAPA",
     rtlTitle: "خرائط",
-    icon: "icon-pin",
+    icon: "icon-square-pin",
     class: "" },
   {
     path: "/notifications",
@@ -38,7 +38,7 @@ export const ROUTES: RouteInfo[] = [
 
   {
     path: "/user",
-    title: "User Profile",
+    title: "USUARIOS",
     rtlTitle: "ملف تعريفي للمستخدم",
     icon: "icon-single-02",
     class: ""
@@ -61,7 +61,7 @@ export const ROUTES: RouteInfo[] = [
     path: "/TipoEventos",
     title: "Tipos de eventos",
     rtlTitle: "ار تي ال",
-    icon: "icon-world",
+    icon: "icon-notes",
     class: ""
   }
 ];

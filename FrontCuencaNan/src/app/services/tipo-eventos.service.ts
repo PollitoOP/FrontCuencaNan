@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
-import { TipoEventos } from './tipo-eventos';
+import { TipoEventos } from '../models/tipo-eventos';
 
 @Injectable({
   providedIn: 'root'

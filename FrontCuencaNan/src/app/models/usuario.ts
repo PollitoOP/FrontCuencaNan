@@ -1,4 +1,4 @@
-export abstract class Usuario {
+export class Usuario {
 
     id_usuario: number = 0;
     cedula: string = "";

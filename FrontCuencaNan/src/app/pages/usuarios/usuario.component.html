@@ -1,0 +1,76 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">Usuarios</div>
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            Listado de usuarios
+          </h6>
+          <div class="my-2 text-left">
+            <button
+              class="btn btn-rounded btn-primary"
+              type="button"
+              (click)="crearUsuario()"
+            >
+              Crear Usuario
+            </button>
+          </div>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Cédula</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Mail</th>
+                <th>Dirección</th>
+                <th>Género</th>
+                <th>Fecha Nacimiento</th>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th>Celular</th>
+                <th>Foto</th>
+                <th>Intereses</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let usuario of usuarios">
+                <td>{{ usuario.id_usuario }}</td>
+                <td>{{ usuario.cedula }}</td>
+                <td>{{ usuario.nombres }}</td>
+                <td>{{ usuario.apellidos }}</td>
+                <td>{{ usuario.mail }}</td>
+                <td>{{ usuario.direccion }}</td>
+                <td>{{ usuario.genero }}</td>
+                <td>{{ usuario.fecha_nacimiento | date }}</td>
+                <td>{{ usuario.nombre_usuario }}</td>
+                <td>{{ usuario.contrasena }}</td>
+                <td>{{ usuario.celular }}</td>
+                <td>{{ usuario.foto }}</td>
+                <td>{{ usuario.intereses }}</td>
+                <td>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    [routerLink]="['/usuarios/form', usuario.id_usuario]"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="eliminarUsuario(usuario.id_usuario)"
+                  >
+                    Eliminar
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

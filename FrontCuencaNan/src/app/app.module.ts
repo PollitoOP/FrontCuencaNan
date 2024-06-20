@@ -11,8 +11,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppRoutingModule } from "./app-routing.module";
 import { ComponentsModule } from "./components/components.module";
 import { LoginComponent } from './login/login.component';
-import { UsuarioComponent } from './usuario/usuario.component';
-import { FormComponent } from './usuario/form.component';
+import { UsuarioComponent } from "./pages/usuarios/usuario.component";
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,7 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
-  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, LoginComponent, UsuarioComponent, FormComponent],
+  declarations: [AppComponent, AdminLayoutComponent, AuthLayoutComponent, LoginComponent, UsuarioComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
